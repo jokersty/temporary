@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="gbk" />
+	<title>2008-2018 穿越十年</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<script src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/js/flexible.1258578.js"></script>
+	<script src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/js/html2canvas.min.1258577.min.js"></script>
+	<link  rel="stylesheet" href="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/css/layout.1258581.css"/>
+	<script>
+		//分享
+		window.shareData = {
+			title  : '2008-2018你不曾忘却的10年',	//标题：<22中文
+			desc   : '从北京奥运会到俄罗斯世界杯，颠覆的十年，传祺的十年!',	//摘要：<26中文
+			link   : location.href.split('?')[0],	//分享链接（默认当前链接）
+			imgUrl : 'http://cms-bucket.nosdn.127.net/2018/07/18/9abae57287ee496a9d0afb28b0623034.jpeg',	//图片：200x200、jpg、<20k
+			success: function(){
+				neteaseAnalysis({ modelid: "autoh5_180713h5_gqcq_10year" , func: "sharedone",spst:1});
+			},
+			cancel : function(){
+				neteaseAnalysis({ modelid: "autoh5_180713h5_gqcq_10year" , func: "sharedone",spst:1});
+			}
+		};
+		
+	</script>
+</head>
+<body>	
+	<h1 hidden>这是你不敢打开的《十年》</h1>
+	<!-- 主要内容 -->
+	<div id="app" >
+		<canvas id="canvasa" width="750" height="1250"  ></canvas>
+		<div id="start" >
+			<img src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/images/start.png" alt="">
+		</div>
+		
+		<div class="collection" ></div>
+		<div id="btn" >
+			<div id="btnimg" class="btnimg" ></div>
+		</div>
+		<div class="endpage" >
+			<div class="word-box" >
+				<img src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/images/words.png" alt="words">
+			</div>
+			<div class="btn-box" >
+				<button class="share" ></button>
+				<button class="return" ></button>
+				<button class="toimg" ></button>
+			</div>
+		</div>
+	</div>
+	<div class="wordimg-box" >
+		<div id="wordimg">
+			
+			</div>
+			
+			<div class="btns-box">
+				<button class="intro"></button>
+				<button class="bornbtn-gaga"></button>
+			</div>
+			<div class="introwords-box" >
+				<div class="introwords" ></div>
+				<button class="closebtns" ></button>
+			</div>
+		</div>
+		<div class="bornimg-box-out" >
+			<div class="bornimg-box">
+				<img class="bornimg" src="" alt="">
+				<!-- <div class="warnwords-box">
+					<img src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/images/warnwords.png" alt="">
+				</div> -->
+				<p class="warnwords-box" >长按保存图片，赢大礼</p>
+				<a href="" class="download-new" ></a>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="loading" ></div>
+	<!-- 音乐 -->
+	<audio id="audio" preload="preload" loop="loop">
+		<source src="http://nos.netease.com/fps-pro/temp/f25347f46c91d0a214090b0a23806ceb/Journey(1).mp3" type="audio/mpeg">
+		</audio>
+		<!-- 新闻客户端分享-无需编辑 -->
+		<iframe src="javascript:void(0)" id="_share" name="_share" style="display:none!important" hidden></iframe>
+		<div style="display:none!important" hidden>
+			<div id="__newsapp_sharetext">text</div>
+			<div id="__newsapp_sharephotourl">photo</div>
+			<div id="__newsapp_sharewxtitle">title</div>
+			<div id="__newsapp_sharewxtext">text</div>
+			<div id="__newsapp_sharewxurl">url</div>
+			<div id="__newsapp_sharewxthumburl">thumb</div>
+		</div>
+		<!-- 非微信、客户端环境分享 -->
+		<div class="model-share" hidden id="model-share">
+			<div class="share-wrap-inner">
+				<div class="share-title">分享到</div>
+				<ul class="share-list clearfix">
+					<li class="share-item"><a class="icon icon-yixin" data-share="yixin" title="yixin">易信</a></li>
+					<li class="share-item"><a class="icon icon-lofter" data-share="lofter" title="lofter">LOFTER</a></li>
+					<li class="share-item"><a class="icon icon-sina" data-share="sina" title="sina">新浪微博</a></li>
+					<li class="share-item"><a class="icon icon-qzone" data-share="qzone" title="qzone">腾讯空间</a></li>
+				</ul>
+				<a class="cancel-btn" href="javascript:;">取&nbsp;消</a>
+			</div>
+		</div>
+
+		<!-- 横屏提示 -->
+		<div class="lock_wrap">
+			<div class="lock">为了更好的体验，请使用竖屏浏览</div>
+		</div>
+		<!-- 图片初始加载 -->
+		<script type="text/html" id="loadImg">
+			<img src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/images/loading.gif" />
+		</script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		<script src="http://static.ws.126.net/auto/frontend/lib/zepto/1.2.0/zepto.min.js"></script>
+		<script  src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/js/app.1258462.min.js"></script>
+		<script  src="http://static.ws.126.net/f2e/auto/h5_special/180713h5_gqcq_10year/static/js/init.1258588.js"></script>
+		<!-- STAT WRating v1.0 -->
+		<script type="text/javascript" src="//static.ws.126.net/common/script/wrating.js"></script>
+		<script type="text/javascript">
+			var vjAcc = "860010-0508010000";
+			var wrUrl = "http://163.wrating.com/";
+			vjTrack("");
+		</script>
+		<noscript>
+			<img src="http://163.wrating.com/a.gif?a=&c=860010-0508010000" width="1" height="1"/>
+		</noscript>
+		<!-- STAT NetEase Devilfish 2006 -->
+		<script type="text/javascript" src="http://analytics.163.com/ntes.js"></script>
+		<script type="text/javascript">
+    _ntes_nacc = "auto"; //站点ID。
+    neteaseTracker();
+</script>
+<!-- 回流统计 -->
+<script src="http://img1.cache.netease.com/utf8/3g/util/analysis.min.js"></script>
+<script>
+	neteaseAnalysis({
+		modelid: "autoh5_180713h5_gqcq_10year",
+		spst: 5
+	})
+</script>
+</body>
+</html>
